@@ -1,0 +1,41 @@
+.contactSection {
+    max-width: 800px;
+    min-height: 75vh;
+    margin: 0px auto;
+    padding-top: 300px;
+    padding-bottom: 300px;
+
+    .contactTitle {
+        max-width: 800px;
+        min-width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-shadow: 2px 2px black;
+    }
+    
+    .contactText {
+        padding-top: 20px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        max-width: 500px;
+        font-size: 18px;
+        text-align: left;
+    }
+    
+    .contactButton {
+        border-color: #9DEBE3;
+        color: #9DEBE3;
+        background-color: #252c49;
+        font-size: 20px;
+        margin: -10px;
+        padding: 15px 20px;
+        border-radius: 5px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 70px;
+    } 
+}

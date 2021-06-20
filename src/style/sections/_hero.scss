@@ -1,0 +1,46 @@
+//Hero-------------------------------------------------------------
+
+#hero {
+    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
+
+    .hero-Section {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $black-bg;
+        max-width: 900px;
+        width: 90%;
+    }
+
+    .hero-underTitleText{
+        margin-top: 5%;
+        text-align: center;
+        font-size: 1rem;
+
+        @include respond(breakpoint-md) {
+            font-size: 1.1rem;
+        }
+    }    
+    
+    .hero-Button {
+        background: $black-bg;
+        border-color: grey;
+        padding: 0.3rem 0.8rem;
+        position: relative;
+        bottom: 25%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        font-size: 1.5rem;
+        border-radius: 4px;
+        font-family: Montserrat;
+        color: white;
+
+        @include respond(breakpoint-md) {
+            padding: 0.4rem 1.3rem;
+            font-size: 1.4rem;
+        }
+    }
+}

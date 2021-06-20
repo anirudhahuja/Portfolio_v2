@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css');
+
+
+body {
+    background-color: #252c49;
+    color: #E4DCCE;
+    overflow-x: hidden;
+    width: 100%;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: normal;
+    font-size: 1.1rem;
+
+    @include respond(breakpoint-md) {
+        font-size: 0.9rem;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.5em;
+
+    @include respond(breakpoint-sm) {
+        font-size: 2rem;
+    }
+    @include respond(breakpoint-md) {
+        font-size: 3rem;
+    }
+    @include respond(breakpoint-lg) {
+        font-size: 3rem;
+    }
+}
+
+//Header
+h2 {
+    font-weight: normal;
+    line-height: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+
+    @include respond(breakpoint-md) {
+        font-size: 2rem;
+    }
+}
+
+a.blueText {
+    color: #9DEBE3;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    padding: 0;
+    color: grey;
+    background-color: grey;
+}
+
+ul.a {
+    list-style-type: square;
+}
+
+mark.blueText {
+    color: #9DEBE3;
+    background: none;
+}
+
+mark.whiteText {
+    color: #E4DCCE;
+    background: none;
+}

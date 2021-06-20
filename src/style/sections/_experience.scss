@@ -1,0 +1,21 @@
+//experience----------------------------------------------------------
+
+#experience {
+    max-width: 800px;
+    min-height: 75vh;
+    margin: 0px auto;
+    padding: 10vh 0px;
+
+    @include respond(breakpoint-md) {
+        // padding: 150px 0px;
+    }
+
+    .projectsTitle{
+        display: flex;
+        justify-content: center;
+        text-shadow: 2px 2px black;
+    }
+    
+}
+
+

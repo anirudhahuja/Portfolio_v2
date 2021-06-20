@@ -1,0 +1,50 @@
+//About-------------------------------------------------------------
+
+#about {
+    max-width: 800px;
+    min-height: 75vh;
+    margin: 0px auto;
+    padding: 100px 0px;
+
+    @include respond(breakpoint-md) {
+        padding: 150px 0px;
+    }
+    
+    .aboutTitle {
+        display: flex;
+        justify-content: center;
+        text-shadow: 2px 2px black;
+    }
+        
+    .aboutText {
+        padding-top: 5%;
+        max-width: 500px;
+    }
+
+    .imageofMe {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 10%);
+        width: 30%;
+        min-width: 200px;
+        max-width: 100%;
+        height: auto;
+        box-shadow: 7px 7px $black-bg;
+
+        @include respond(breakpoint-md) {
+            position: relative;
+            left: 0%;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 100%;
+        }
+    }
+    
+    .aboutList {
+        max-width: 350px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: -15px;
+    }
+}

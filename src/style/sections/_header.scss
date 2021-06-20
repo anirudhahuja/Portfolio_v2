@@ -1,0 +1,56 @@
+//Header-------------------------------------------------------------
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#header {
+    background-color: $navbar-bg;
+    box-shadow: 0px 15px 5px 0px rgba(0,0,0,0.1);
+    font-family: 'Hack', monospace;
+    font-size: 0.85rem;
+    z-index: 1;
+    transition: top 0.3s;  
+    
+    .brandStyle {
+        @include respond(breakpoint-md) {
+            position: relative;
+            left: 30%;
+        }
+    }
+    
+    .toggleStyle {
+        border: none;
+    }
+
+    .insideLink {
+        display: flex;
+        flex-direction: column;
+
+        @include respond(breakpoint-md) {
+            display: flex;
+            flex-direction: row;
+        }
+
+        @include respond(breakpoint-lg) {
+            position: relative;
+            left: 10%;
+        }
+
+        .resumeButton {
+            border-color: $white;
+            color: $light-blue;
+            padding: 5px 12px;
+            border-radius: 3px;
+            margin-left: 5%;
+            cursor: pointer;
+            font-size: inherit;
+        }
+    
+        .resumeButton:hover {
+            background-color: #3c3f52;
+        }
+    }
+}
