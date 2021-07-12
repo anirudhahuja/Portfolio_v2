@@ -19,7 +19,7 @@ const About = () => {
                         <div className="aboutText">
                             Hi there! I'm Ani, a Web Developer based in the Bay Area, California. <br/>
                             My 'career' in web development started back in 2010 when I started making 
-                            HTML webpages for shows I was watching at the time. I was only 13 at the time, 
+                            HTML webpages for shows I was into. I was only 13 at the time, 
                             but my interest in web dev never left. <br/> <br/>
                             Fast-forward to now, and I now have a passion for learning and developing new technologies 
                             for the web. <br/> <br/>
