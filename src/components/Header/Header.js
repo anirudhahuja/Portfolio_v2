@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Navbar, Nav, Container, Button } from 'react-bootstrap'
-import { FaGithub, FaLinkedin, FaBars } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
 import { StaticImage } from 'gatsby-plugin-image'
 
 //Smooth Scrolling
@@ -10,7 +10,11 @@ if (typeof window !== "undefined") {
 }
 
 const Header = () => { 
+    //Checking to see if Menu is open or mobile to lock scrolling
+    const [open, setOpen] = useState(false);
+
     useEffect(() => {
+        const html = document.querySelector('html')
         window.onscroll = function() {fixHeader()};
         // Get the header
         const header = document.getElementById("header");
@@ -24,24 +28,25 @@ const Header = () => {
             // Once scrollbar passes the navbar's initial position, attach the fixed header class
             if (window.pageYOffset > topofHeader) {
                 header.classList.add("fixed-header");
-
                 // Hide scrollbar while scrolling down
                 if (prevScrollpos > currentScrollPos) {
-                document.getElementById("header").style.top = "0";
+                    document.getElementById("header").style.top = "0";
                 } else {
-                document.getElementById("header").style.top = "-70px";
+                    document.getElementById("header").style.top = "-70px";
                 }
                 prevScrollpos = currentScrollPos;
 
             } else {
                 header.classList.remove("fixed-header");
             }
-            console.log(currentScrollPos, prevScrollpos)
         }
+
+        //If menu open, lock scrolling
+        { open ? (html.style.overflow = "hidden") : (html.style.overflow = "visible")};
     });
 
     return (
-        <Navbar id="header" expand="lg">
+        <Navbar collapseOnSelect id="header" expand="lg">
             <Navbar.Brand href="#">
                 <StaticImage className="brandStyle"
                     src="../../images/brand.png"
@@ -51,22 +56,26 @@ const Header = () => {
                     height={40}
                 />
             </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggleStyle">
-            <FaBars color='#9DEBE3' size='1.5em'/>
+        <Navbar.Toggle 
+            aria-controls="navbarScroll" 
+            onClick = {() => setOpen(!open)}
+            className="toggleStyle"
+        >
+            {open ? <FaTimes color='#9DEBE3' size='1.5em'/> : <FaBars color='#9DEBE3' size='1.5em'/>}
         </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
                 <Container className="insideLink">
-                    <Nav.Link href="#about">
+                    <Nav.Link href="#about" data-toggle="collapse">
                         <mark className="blueText">I.</mark><mark className="whiteText">About</mark>
                     </Nav.Link>
                     <Nav.Link href="#experience">
-                        <mark className="blueText">III.</mark><mark className="whiteText">Experience</mark>
+                        <mark className="blueText">II.</mark><mark className="whiteText">Experience</mark>
                     </Nav.Link>
-                    <Nav.Link href="#about">
-                        <mark className="blueText">IV.</mark><mark className="whiteText">Contact</mark>
+                    <Nav.Link href="#contact">
+                        <mark className="blueText">III.</mark><mark className="whiteText">Contact</mark>
                     </Nav.Link>
-                    <Nav.Link href="#about">
+                    <Nav.Link href="https://drive.google.com/file/d/1uv45BEgmh7u7QSFoB0gMNhMLkWTEUEFz/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                         <Button variant="outline-primary" className="resumeButton">Resume</Button>
                     </Nav.Link>
                 </Container>

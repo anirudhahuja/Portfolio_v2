@@ -2,9 +2,9 @@
 
 #about {
     max-width: 800px;
-    min-height: 75vh;
+    min-height: 40vh;
     margin: 0px auto;
-    padding: 100px 0px;
+    padding: 15vh 0px;
 
     @include respond(breakpoint-md) {
         padding: 150px 0px;

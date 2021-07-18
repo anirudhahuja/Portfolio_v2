@@ -6,6 +6,7 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-smoothscroll",
     {
       resolve: "gatsby-plugin-manifest",
       options: {

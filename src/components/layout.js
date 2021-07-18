@@ -3,7 +3,7 @@ import Hero from './Hero/Hero'
 import Header from './Header/Header'
 import About from './About/About'
 import Experience from './Experience/Experience'
-// import Contact from './Contact/Contact'
+import Contact from './Contact/Contact'
 
 const Layout = (props) => {
     return (
@@ -12,7 +12,7 @@ const Layout = (props) => {
             <Header />
             <About />
             <Experience />
-            {/* <Contact /> */}
+            <Contact />
         </div>
     )
 }

@@ -2,14 +2,14 @@
 
 #experience {
     max-width: 800px;
-    min-height: 75vh;
+    min-height: 40vh;
     margin: 0px auto;
-    padding: 10vh 0px;
+    padding: 15vh 0px;
 
     @include respond(breakpoint-md) {
-        // padding: 150px 0px;
+        padding: 150px 0px;
     }
-
+    
     .projectsTitle {
         display: flex;
         justify-content: center;
@@ -50,11 +50,26 @@
                 }
             }
 
+            #farmersImage {
+                margin-top: 10%;
+                height: 25%;
+            }
+
+            #communityImage {
+                margin-top: 10%;
+                height: 25%;
+                min-width: 200px;
+            }
+
             .cardButton {
                 border-color: $white;
                 color: $light-blue;
                 padding: 4px 12px;
                 margin-bottom: 10px;
+            }
+
+            .cardButton:hover {
+                background: #3b3e51;
             }
 
             #cardFooter {

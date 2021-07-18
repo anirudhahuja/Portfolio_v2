@@ -17,7 +17,7 @@ const About = () => {
                 <Row>
                     <Col xs={12} md={8}>
                         <div className="aboutText">
-                            Hi there! I'm Ani, a Web Developer based in the Bay Area, California. <br/>
+                            Hi there! I'm Ani, a Web Developer based in the Bay Area, California. 
                             My 'career' in web development started back in 2010 when I started making 
                             HTML webpages for shows I was into. I was only 13 at the time, 
                             but my interest in web dev never left. <br/> <br/>

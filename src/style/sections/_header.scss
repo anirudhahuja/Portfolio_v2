@@ -22,7 +22,9 @@
     }
     
     .toggleStyle {
-        border: none;
+        // width: 20%;
+        // height: 20%;
+        border: 2px dotted $light-blue;
     }
 
     .insideLink {

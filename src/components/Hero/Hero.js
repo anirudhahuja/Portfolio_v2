@@ -1,25 +1,30 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { Button } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import Animation from '../../utils/animation';
 
 const Hero = () => {
     return (
         <div id="hero">
             <Animation />
-            <div className="hero-Section" >
-                <div className="hero-titleText">
+            <div className="heroSection" >
+                <div className="heroTitle">
                     <h1> Hello, I'm Anirudh Ahuja. <br/>
                     I'm a Fullstack Developer. </h1>
                 </div>
-                <div className="hero-underTitleText">
+                <div className="heroText">
                     <mark className="blueText"> But you can just call me Ani. </mark> 
                 </div>  
+                
             </div>
-            {/* Link to the beginning of About Section */}
-            <Link to = "/#header">
-                <Button variant="outline-primary" className="hero-Button"> Check out my Work </Button>
-            </Link>
+            <div className = "buttonSection">
+                <Button variant="outline-primary" className="heroButton" onClick={() => scrollTo('#header')}>
+                    More about Me
+                </Button>
+                <Button variant="outline-primary" className="heroButton" href="https://drive.google.com/file/d/1uv45BEgmh7u7QSFoB0gMNhMLkWTEUEFz/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    My Resume
+                </Button>
+            </div>
         </div>
     )   
 }

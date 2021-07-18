@@ -5,7 +5,7 @@
     height: 100vh;
     width: 100%;
 
-    .hero-Section {
+    .heroSection {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -15,7 +15,7 @@
         width: 90%;
     }
 
-    .hero-underTitleText{
+    .heroText{
         margin-top: 5%;
         text-align: center;
         font-size: 1rem;
@@ -25,22 +25,31 @@
         }
     }    
     
-    .hero-Button {
-        background: $black-bg;
-        border-color: grey;
-        padding: 0.3rem 0.8rem;
-        position: relative;
-        bottom: 25%;
+    .buttonSection {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 75%;
         left: 50%;
-        transform: translate(-50%, 20%);
-        font-size: 1.5rem;
-        border-radius: 4px;
-        font-family: Montserrat;
-        color: white;
-
-        @include respond(breakpoint-md) {
-            padding: 0.4rem 1.3rem;
-            font-size: 1.4rem;
+        transform: translateX(-50%);
+        
+        .heroButton {
+            background: $black-bg;
+            width: 150px;
+            border-color: grey;
+            padding: 0.5rem 0rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            font-family: Montserrat;
+            color: white;
+            margin: 0 15px;
+    
+            @include respond(breakpoint-md) {
+                width: 200px;
+                // padding: 0.4rem 1.3rem;
+                font-size: 1.4rem;
+            }
         }
     }
+    
 }
