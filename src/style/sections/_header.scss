@@ -12,7 +12,8 @@
     font-family: 'Hack', monospace;
     font-size: 0.85rem;
     z-index: 1;
-    transition: top 0.3s;  
+    transition: top 0.3s; 
+    width: 100vw;
     
     .brandStyle {
         @include respond(breakpoint-md) {

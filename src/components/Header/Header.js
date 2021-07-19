@@ -3,18 +3,11 @@ import { Navbar, Nav, Container, Button } from 'react-bootstrap'
 import { FaGithub, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
 import { StaticImage } from 'gatsby-plugin-image'
 
-//Smooth Scrolling
-if (typeof window !== "undefined") {
-    // eslint-disable-next-line global-require
-    require("smooth-scroll")('a[href*="#"]')
-}
-
 const Header = () => { 
     //Checking to see if Menu is open or mobile to lock scrolling
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
-        const html = document.querySelector('html')
         window.onscroll = function() {fixHeader()};
         // Get the header
         const header = document.getElementById("header");
@@ -42,7 +35,7 @@ const Header = () => {
         }
 
         //If menu open, lock scrolling
-        { open ? (html.style.overflow = "hidden") : (html.style.overflow = "visible")};
+        // { open ? (document.body.style.overflow = "hidden") : (document.body.style.overflow = "unset")};
     });
 
     return (
