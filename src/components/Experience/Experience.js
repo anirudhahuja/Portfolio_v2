@@ -24,8 +24,8 @@ const Experience = () => {
                             <Card.Body>
                                 <Card.Title>Farmers Insurance</Card.Title>
                                 <Card.Text>
-                                Worked within the Configuration team to increase efficiency and stability of the product 
-                                by implementing changes presented by other teams. 
+                                    Worked within the Configuration team to increase efficiency and stability of the product 
+                                    by implementing changes presented by other teams. <br/> <br/>
                                 </Card.Text>
                                 <Button 
                                     disabled
@@ -40,13 +40,13 @@ const Experience = () => {
                             </Card.Footer>
                         </Card>
                         <Card id="cardStyle" className="text-center">
-                            <Card.Header as="h6" bg={"dark"}> Lead Frontend Developer </Card.Header>
+                            <Card.Header as="h6" bg={"dark"}> Lead Front End Developer </Card.Header>
                             <Card.Img variant="top" src={ADOD} className="cardImage"/>
                             <Card.Body>
                                 <Card.Title>A Drop of Delight</Card.Title>
                                 <Card.Text>
-                                A community led TF2 charity event, created in 2020, 
-                                to help fundraise for clean water and proper sanitation for those in need.
+                                    Developed a website’s Front End using React for a community led 
+                                    charity event for the organization Just a Drop. <br/> <br/> <br/>
                                 </Card.Text>
                                 <Button 
                                     href="https://adropofdelight.org" target="_blank" rel="noopener noreferrer" 
@@ -66,10 +66,11 @@ const Experience = () => {
                             <Card.Body>
                                 <Card.Title>Community Bridges</Card.Title>
                                 <Card.Text>
-                                Collaborated with a team to optimize the survey process the non-profit utilized for new users. 
+                                    Collaborated with a team to optimize the survey process meant for new users on
+                                    the non-profit's website. <br/> <br/> <br/>
                                 </Card.Text>
                                 <Button 
-                                    disabled
+                                    href="https://communitybridges.org/" target="_blank" rel="noopener noreferrer"
                                     variant="outline-primary" 
                                     className="cardButton"
                                 >
