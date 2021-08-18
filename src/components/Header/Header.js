@@ -59,26 +59,26 @@ const Header = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
                 <Container className="insideLink">
-                    <Nav.Link href="#about" data-toggle="collapse">
+                    <Nav.Link href="#about" data-toggle="collapse" onClick = {() => setOpen(!open)}>
                         <mark className="blueText">I.</mark><mark className="whiteText">About</mark>
                     </Nav.Link>
-                    <Nav.Link href="#experience">
+                    <Nav.Link href="#experience" data-toggle="collapse" onClick = {() => setOpen(!open)}>
                         <mark className="blueText">II.</mark><mark className="whiteText">Experience</mark>
                     </Nav.Link>
-                    <Nav.Link href="#contact">
+                    <Nav.Link href="#contact" data-toggle="collapse" onClick = {() => setOpen(!open)}>
                         <mark className="blueText">III.</mark><mark className="whiteText">Contact</mark>
                     </Nav.Link>
-                    <Nav.Link href="https://drive.google.com/file/d/1uv45BEgmh7u7QSFoB0gMNhMLkWTEUEFz/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <Nav.Link href="https://drive.google.com/file/d/1uv45BEgmh7u7QSFoB0gMNhMLkWTEUEFz/view?usp=sharing" target="_blank" rel="noopener noreferrer" data-toggle="collapse" onClick = {() => setOpen(!open)}>
                         <Button variant="outline-primary" className="resumeButton">Resume</Button>
                     </Nav.Link>
                 </Container>
             </Nav>
             <Nav className="ml-auto">
                 <Container className="outsideLink">
-                    <Nav.Link href="https://github.com/anirudhahuja" target="_blank" rel="noopener noreferrer">
+                    <Nav.Link href="https://github.com/anirudhahuja" target="_blank" rel="noopener noreferrer" data-toggle="collapse" onClick = {() => setOpen(!open)}>
                         <FaGithub color='white' size='1.75em'/>
                     </Nav.Link>
-                    <Nav.Link href="https://www.linkedin.com/in/anirudhahuja/" target="_blank" rel="noopener noreferrer">
+                    <Nav.Link href="https://www.linkedin.com/in/anirudhahuja/" target="_blank" rel="noopener noreferrer" data-toggle="collapse" onClick = {() => setOpen(!open)}>
                         <FaLinkedin color='white' size='1.75em'/>
                     </Nav.Link>
                 </Container>
