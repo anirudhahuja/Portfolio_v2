@@ -1,20 +1,35 @@
-import React from 'react'
-import Hero from './Hero/Hero'
-import Header from './Header/Header'
-import About from './About/About'
-import Experience from './Experience/Experience'
-import Contact from './Contact/Contact'
+import React from 'react';
+import Hero from './Hero/Hero';
+import About from './About/About';
+import Tech from './Tech/Tech';
+import Experience from './Experience/Experience';
+import Contact from './Contact/Contact';
 
-const Layout = (props) => {
+const Layout = () => {
     return (
-        <div>
-            <Hero />
-            <Header />
-            <About />
-            <Experience />
-            <Contact />
+        <div
+            style={{
+                position: 'relative',
+                height: '100vh',
+                width: '100vw',
+                backgroundImage: 'url(/background.gif)', // Update path as needed
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                zIndex: 0,
+            }}
+        >
+            <div style={{ position: 'relative', zIndex: 1 }}>
+                <Hero />
+                {/* <Header /> */}
+                <About />
+                <Tech />
+                <Experience />
+                <Contact />
+                
+            </div>
         </div>
-    )
-}
+    );
+};
 
-export default Layout
+export default Layout;

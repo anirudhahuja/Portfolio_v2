@@ -1,83 +1,110 @@
 //experience----------------------------------------------------------
 
 #experience {
-    max-width: 800px;
-    min-height: 40vh;
     margin: 0px auto;
-    padding: 15vh 0px;
 
     @include respond(breakpoint-md) {
-        padding: 150px 0px;
+        padding-top: 100px;
     }
-    
+
     .projectsTitle {
         display: flex;
         justify-content: center;
         text-shadow: 2px 2px black;
     }
 
-    #deckStyle {
-        width: 100vw;
+    /* Section styling */
+    .experience-section {
+        position: relative;
+        left: 10%;
+        background-color: #1e293b; 
+        padding: 2rem;
+        border-radius: 10px; /* Smooth corners for the section */
+    }
 
-        #cardStyle {
-            background-color: $navbar-bg;
-            font-size: 0.8rem;
-            position: relative;
-            left: 50%; 
-            transform: translateX(-50%);
-            width: 85%;
-            // max-width: 16rem;
+    /* Title styling */
+    .experience-title {
+        font-size: 2.2rem;
+        font-weight: bold;
+        
+        color: #343a40; /* Dark text color */
+        text-transform: uppercase; /* Capitalized text */
+    }
 
-            @include respond(breakpoint-sm) {
-                left: 0%;
-                transform: translateX(-0%);
-                // max-width: 14rem; 
+    /* Ensure all cards in the grid have the same height */
+    .experience-grid {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        gap: 1rem; /* Consistent spacing between cards */
+        position: relative;
+        // right: 5%;
+        @include respond(breakpoint-sm) {
+            left: 5%;
+        }
+    
+    }
 
-            }
+    .experience-card {
+        display: flex;
+        flex-direction: column; /* Ensures the content inside the card is aligned vertically */
+        justify-content: space-between; /* Evenly distribute content */
+        height: 100%; /* Allow cards to stretch to the full height of the container */
+        min-height: 200px; /* Set a minimum height for all cards */
+        background-color: #1e293b;
+        transition: transform 0.2s ease;
+    }
 
-            .cardImage {
-                position: relative;
-                left: 50%; 
-                transform: translate(-50%, 5%);
-                height: 20%;
-                width: 20%;
-                min-width: 130px;
+    /* Optional hover effect */
+    .experience-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
 
-                @include respond(breakpoint-sm) {
-                    height: 30%;
-                    width: 50%;
-                    min-width: 150px;
-                }
-            }
+    /* Card title styling */
+    .experience-card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #9DEBE3; /* Bootstrap blue */
+        
+    }
 
-            #farmersImage {
-                margin-top: 10%;
-                height: 25%;
-            }
+    .experience-company {
+        font-weight: normal;
+        color: #f8fafc; /* Muted gray */
+    }
 
-            #communityImage {
-                margin-top: 10%;
-                height: 25%;
-                min-width: 200px;
-            }
+    /* Subtitle styling */
+    .experience-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        color: #f8fafc !important;
+        
+    }
 
-            .cardButton {
-                border-color: $white;
-                color: $light-blue;
-                padding: 4px 12px;
-                margin-bottom: 10px;
-            }
+    /* Details list styling */
+    .experience-details {
+        padding-left: 20px; /* Add left padding for bullet points */
+    }
 
-            .cardButton:hover {
-                background: #3b3e51;
-            }
+    .experience-detail-item {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #f8fafc; /* Dark gray for readability */
+        margin: 10px;
+    }
 
-            #cardFooter {
-                font-size: 0.7rem;
-                font-family: 'Hack', monospace;
-            }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .experience-title {
+            font-size: 1.8rem;
+        }
+
+        .experience-card-title {
+            font-size: 1.1rem;
+        }
+
+        .experience-detail-item {
+            font-size: 0.85rem;
         }
     }
 }
-
-

@@ -1,31 +1,53 @@
 import React from 'react'
-import { Row, Col, Button } from 'react-bootstrap';
+import { Container, Col, Row, Button } from "react-bootstrap"
+import { FaArrowCircleDown } from 'react-icons/fa';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import Animation from '../../utils/animation';
+import Typewriter from 'typewriter-effect';
 
 const Hero = () => {
     return (
-        <div id="hero">
-            <Animation />
+        <Container id="hero">
             <div className="heroSection" >
-                <div className="heroTitle">
-                    <h1> Hello, I'm Anirudh Ahuja. <br/>
-                    I'm a Full Stack Developer. </h1>
-                </div>
-                <div className="heroText">
+                <Row className="heroTitle">
+                    <h1> 
+                        Hello, I'm Anirudh Ahuja. <br/>
+                        <Typewriter 
+                            className="typewriter"
+                            options={{
+                                autoStart: true,
+                                loop: true,
+                            }}
+                            onInit={(typewriter) => {
+                            typewriter
+                                .typeString("I'm a Fullstack Developer.")
+                                .pauseFor(2000)
+                                .deleteAll()
+                                .typeString("I'm a Software Developer.")
+                                .pauseFor(2000)
+                                .deleteAll()
+                                .typeString("I'm a Frontend Developer.")
+                                .pauseFor(2000)
+                                .deleteAll()
+                                .start();
+                            }}
+                        /> 
+                    </h1>
+                </Row>
+                <Row className="heroText">
                     <mark className="blueText"> But you can just call me Ani. </mark> 
-                </div>  
-                
+                </Row>  
+                <Row className="resumeButton">
+                    <Button variant="outline-primary" className="heroButton" href="https://drive.google.com/file/d/1rhINwdksZjRwEFQOlFwIqZlUP8_9t3ca/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        Resume
+                    </Button>
+                </Row>
+                <Row className="downButton">
+                    <Button variant="outline-primary" className="goDown" size="lg" onClick={() => scrollTo('#about')}>
+                            <FaArrowCircleDown color='white' size='1.75em'/>
+                    </Button>
+                </Row>
             </div>
-            <div className = "buttonSection">
-                <Button variant="outline-primary" className="heroButton" onClick={() => scrollTo('#header')}>
-                    More about Me
-                </Button>
-                <Button variant="outline-primary" className="heroButton" href="https://drive.google.com/file/d/1uv45BEgmh7u7QSFoB0gMNhMLkWTEUEFz/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                    My Resume
-                </Button>
-            </div>
-        </div>
+        </Container>
     )   
 }
 

@@ -3,52 +3,89 @@
 #hero {
     height: 100vh;
     width: 100vw;
+    margin: 0 auto;
 
     .heroSection {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: $black-bg;
-        max-width: 900px;
-        width: 90%;
-    }
+        position: relative;
+        top: 40%;
 
-    .heroText{
-        margin-top: 5%;
-        text-align: center;
-        font-size: 1rem;
-
-        @include respond(breakpoint-md) {
-            font-size: 1.1rem;
+        @include respond(breakpoint-lg) {
+            top: 37%;
         }
-    }    
-    
-    .buttonSection {
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        top: 75%;
-        left: 50%;
-        transform: translateX(-50%);
+
+        // left: 50%;
         
-        .heroButton {
-            background: $black-bg;
-            width: 9rem;
-            border-color: grey;
-            padding: 0.5rem 0rem;
+        // .heroTitle {
+            
+        // }
+
+        .heroText{
+            margin-top: 5%;
+            text-align: center;
             font-size: 1rem;
+
+            @include respond(breakpoint-md) {
+                font-size: 1.4rem;
+            }
+        }    
+        
+        .resumeButton {
+            margin-top: 33%;
+            margin-right: 2%;
+
+            @include respond(breakpoint-lg) {
+                margin-top: 6%;
+                margin-right: 2%;
+            }
+        }
+
+        .heroButton {
+            width: 9rem;
+            padding: 15px 15px;
+            position: relative;
+            border: none;
+            background-color: transparent; 
+            padding: 0.5rem 0rem;
+            font-size: 1.4rem;
             border-radius: 4px;
             font-family: Montserrat;
             color: white;
-            margin: 0 15px;
-    
+            margin: 0 auto;
+            border: 2px solid transparent;
+            box-sizing: border-box;
+
             @include respond(breakpoint-md) {
-                width: 12.5rem;
+                padding: 30px 30px;
                 // padding: 0.4rem 1.3rem;
-                font-size: 1.4rem;
+                font-size: 1.6rem;
+                width: 15rem;
+            }
+        }
+
+        .heroButton:hover {
+            background-color: transparent;  /* Ensure no background on hover */
+            border: 2px solid #9DEBE3;      /* Maintain the border */
+            color: #9DEBE3;                 /* Keep text color */
+          }
+    
+        .downButton {
+            margin-top: 40%;
+
+            @include respond(breakpoint-lg) {
+                margin-top: 10%;
+            }
+
+            .goDown {
+                border: none;
+                background-color: transparent; 
+                text-decoration: none;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            /* Hover effect */
+            .goDown:hover {
+                transform: translateY(5px);
             }
         }
     }
-    
 }

@@ -1,0 +1,76 @@
+/* Technologies Section Styling */
+#tech {
+    
+    .techTitle {
+        display: flex;
+        justify-content: center;
+        text-shadow: 2px 2px black;
+    }
+
+    .techDescription {
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .techGrid {
+        gap: 1rem; /* Add spacing between cards */
+        margin: 0 auto;
+        position: relative;
+        left: 5%;
+        
+    }
+
+    /* Card styling for horizontal layout */
+    .techCard {
+        display: flex; /* Enable horizontal alignment */
+        align-items: center; /* Vertically align items */
+        justify-content: flex-start; /* Align content to the start */
+        background-color: #1e293b; /* Dark background */
+        border-radius: 8px; /* Rounded corners */
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        height: auto; /* Flexible height */
+        width: 100%; /* Ensure full width of the parent column */
+    }
+
+    /* Hover effect */
+    .techCard:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Icon styling */
+    .techImage {
+        width: 40px; /* Icon size */
+        height: 40px;
+        margin-bottom: 5px; /* Space between the icon and text */
+    }
+
+    /* Text styling */
+    .techName {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #f8fafc; /* Light text color */
+        margin: 0; /* Remove extra margin */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .techTitle {
+            font-size: 1.8rem;
+        }
+
+        .techDescription {
+            font-size: 0.9rem;
+        }
+
+        .techImage {
+            width: 30px;
+            height: 30px;
+        }
+
+        .techName {
+            font-size: 0.8rem;
+        }
+    }
+}

@@ -1,37 +1,49 @@
-# **My Portfolio Website**
+<p align="center">
+  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby Minimal Starter
+</h1>
 
-This project was built using **GatsbyJS**, a modern framework for building fast, optimized, and scalable websites. Below is a description of the file structure for better understanding and navigation of the codebase.
+## 🚀 Quick start
 
----
+1.  **Create a Gatsby site.**
 
-## **File Structure**
+    Use the Gatsby CLI to create a new site, specifying the minimal starter.
 
-```plaintext
-src
-├── components              // All the sections within the website
-│   ├── hero                // Landing page of the portfolio
-│   ├── about               // Info about me :)
-│   ├── tech                // The tools I develop with
-│   ├── contact             // Contact form
-│   └── experience          // Cards about personal experience
-├── layout                  // File where all the content is "added" to the site
-├── images                  // Folder for images used on the site
-├── pages                   // All the pages of the site
-│   ├── index.js            // Homepage
-│   └── 404.js              // Custom 404 page
-├── style                   // All the CSS files for the site
-```
----
+    ```shell
+    # create a new Gatsby site using the minimal starter
+    npm init gatsby
+    ```
 
-## **Features**
-- Built with **GatsbyJS**, enabling fast builds and a great developer experience.
-- Includes **modular components** for easy reuse and customization.
-- Designed with a **visually appealing and responsive layout** to ensure compatibility across devices.
-- **Dynamic contact forms** using services like EmailJS for direct messaging.
-- Easy-to-navigate project structure for scalability and maintenance.
+2.  **Start developing.**
 
----
+    Navigate into your new site’s directory and start it up.
 
-## **Thanks**
-Thank you for taking the time to check out this project!  
-If you have any questions, suggestions, or feedback, feel free to reach out. I appreciate your support!
+    ```shell
+    cd my-gatsby-site/
+    npm run develop
+    ```
+
+3.  **Open the code and start customizing!**
+
+    Your site is now running at http://localhost:8000!
+
+    Edit `src/pages/index.js` to see your site update in real-time!
+
+4.  **Learn more**
+
+    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+## 🚀 Quick start (Netlify)
+
+Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+
+[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)

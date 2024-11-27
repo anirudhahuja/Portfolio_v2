@@ -1,46 +1,147 @@
-#contact {
-    max-width: 800px;
-    min-height: 40vh;
-    margin: 0px auto;
-    padding-bottom: 15vh;
-    
-    @include respond(breakpoint-md) {
-        padding: 150px 0px;
+//contact----------------------------------------------------------
+
+/* Container styling */
+.contact-container {
+    border-radius: 10px; /* Rounded corners */
+    padding: 2rem;
+}
+
+/* Form Section */
+.contact-form-wrapper {
+    padding-right: 2rem; /* Space between form and info section */
+    border-right: 1px solid #4b5563; /* Divider line */
+}
+
+.contact-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-label {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.contact-input {
+    background-color: #1e293b; /* Input background */
+    color: #f8fafc; /* Input text color */
+    border: 1px solid #4b5563; /* Input border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.contact-input::placeholder {
+    color: #9ca3af; /* Placeholder color */
+}
+
+.contact-input:focus {
+    border-color: #61dafb; /* Blue border on focus */
+    box-shadow: 0 0 4px #61dafb; /* Glow effect */
+    background: #1D2021;
+    color: white;
+}
+
+.contact-textarea {
+    height: 120px; /* Set textarea height */
+}
+
+.contact-form-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Link Styling */
+.contact-link {
+    font-size: 0.9rem;
+    color: #61dafb;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+    color: #3b82f6;
+}
+
+/* Submit Button */
+.contact-submit-btn {
+    background-color: #1e293b; 
+    border: none;
+    color: #ffffff; /* White text */
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+.contact-submit-btn:hover {
+    background-color: #1e293b; /* Slightly brighter blue */
+    transform: translateY(-2px); /* Subtle lift */
+}
+
+.contact-submit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 6px ; /* Glow effect */
+}
+
+/* Info Section */
+.info-wrapper {
+    padding-left: 2rem; /* Space between info and form section */
+    text-align: right; /* Align content to the right */
+}
+
+.info-section {
+    color: #f8fafc; /* Light text color */
+}
+
+.info-title {
+    font-weight: bold;
+}
+
+.info-text {
+    margin-top: 5px;
+    color: #9DEBE3; /* Subtle gray */
+    padding-top: 10px;
+}
+
+.icon-container {
+    display: flex; /* Enable horizontal alignment */
+    justify-content: right; /* Center icons horizontally */
+    gap: 1rem; /* Add spacing between icons */
+    margin-top: 1rem; /* Add spacing above the icons */
+}
+
+.social-link {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.1); /* Lift on hover */
+}
+
+.social-icon {
+    margin-top: 10px;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    color: #9DEBE3;
+    transform: scale(1.1);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-form-wrapper {
+        border-right: none; /* Remove divider on small screens */
+        padding-right: 0;
     }
 
-    .contactTitle {
-        display: flex;
-        justify-content: center;
-        text-shadow: 2px 2px black;
+    .info-wrapper {
+        text-align: left; /* Align info to the left on small screens */
+        padding-left: 0;
+        margin-top: 2rem;
     }
-    
-    .contactText {
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-        padding-top: 5%;
-        max-width: 500px;
-        text-align: center;
-
-        @include respond(breakpoint-md) {
-            font-size: 1.2rem;
-        }
-
-        .myEmail {
-            text-align: center;
-        }
-    }
-    
-    .contactButton {
-        border-color: #9DEBE3;
-        color: #9DEBE3;
-        background-color: #252c49;
-        font-size: 1.2rem;
-        padding: 15px 20px;
-        border-radius: 5px;
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-        margin-top: 15%;
-    } 
 }
