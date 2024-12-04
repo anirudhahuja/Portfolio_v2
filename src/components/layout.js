@@ -12,7 +12,7 @@ const Layout = () => {
                 position: 'relative',
                 height: '100vh',
                 width: '100vw',
-                backgroundImage: 'url(/background.gif)', // Update path as needed
+                backgroundImage: 'url(/background.gif)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
@@ -21,7 +21,6 @@ const Layout = () => {
         >
             <div style={{ position: 'relative', zIndex: 1 }}>
                 <Hero />
-                {/* <Header /> */}
                 <About />
                 <Tech />
                 <Experience />

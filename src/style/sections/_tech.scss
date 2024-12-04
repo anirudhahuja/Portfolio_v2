@@ -1,4 +1,5 @@
-/* Technologies Section Styling */
+// Tech-------------------------------------------------------------
+
 #tech {
     
     .techTitle {
@@ -14,47 +15,42 @@
     }
 
     .techGrid {
-        gap: 1rem; /* Add spacing between cards */
+        gap: 1rem;
         margin: 0 auto;
         position: relative;
         left: 5%;
         
     }
 
-    /* Card styling for horizontal layout */
     .techCard {
-        display: flex; /* Enable horizontal alignment */
-        align-items: center; /* Vertically align items */
-        justify-content: flex-start; /* Align content to the start */
-        background-color: #1e293b; /* Dark background */
-        border-radius: 8px; /* Rounded corners */
+        display: flex; 
+        align-items: center; 
+        justify-content: flex-start;
+        background-color: #1e293b;
+        border-radius: 8px;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
-        height: auto; /* Flexible height */
-        width: 100%; /* Ensure full width of the parent column */
+        height: auto;
+        width: 100%;
     }
 
-    /* Hover effect */
     .techCard:hover {
         transform: translateY(-5px);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    /* Icon styling */
     .techImage {
-        width: 40px; /* Icon size */
+        width: 40px;
         height: 40px;
-        margin-bottom: 5px; /* Space between the icon and text */
+        margin-bottom: 5px;
     }
 
-    /* Text styling */
     .techName {
         font-size: 1rem;
         font-weight: bold;
-        color: #f8fafc; /* Light text color */
-        margin: 0; /* Remove extra margin */
+        color: #f8fafc;
+        margin: 0;
     }
-
-    /* Responsive adjustments */
+    
     @media (max-width: 768px) {
         .techTitle {
             font-size: 1.8rem;

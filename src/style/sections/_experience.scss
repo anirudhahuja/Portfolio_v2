@@ -1,4 +1,4 @@
-//experience----------------------------------------------------------
+// Experience----------------------------------------------------------
 
 #experience {
     margin: 0px auto;
@@ -13,29 +13,26 @@
         text-shadow: 2px 2px black;
     }
 
-    /* Section styling */
     .experience-section {
         position: relative;
         left: 10%;
         background-color: #1e293b; 
         padding: 2rem;
-        border-radius: 10px; /* Smooth corners for the section */
+        border-radius: 10px;
     }
 
-    /* Title styling */
     .experience-title {
         font-size: 2.2rem;
         font-weight: bold;
         
-        color: #343a40; /* Dark text color */
-        text-transform: uppercase; /* Capitalized text */
+        color: #343a40;
+        text-transform: uppercase;
     }
 
-    /* Ensure all cards in the grid have the same height */
     .experience-grid {
         display: flex;
-        flex-wrap: wrap; /* Allow wrapping for smaller screens */
-        gap: 1rem; /* Consistent spacing between cards */
+        flex-wrap: wrap;
+        gap: 1rem;
         position: relative;
         // right: 5%;
         @include respond(breakpoint-sm) {
@@ -46,34 +43,31 @@
 
     .experience-card {
         display: flex;
-        flex-direction: column; /* Ensures the content inside the card is aligned vertically */
-        justify-content: space-between; /* Evenly distribute content */
-        height: 100%; /* Allow cards to stretch to the full height of the container */
-        min-height: 200px; /* Set a minimum height for all cards */
+        flex-direction: column; 
+        justify-content: space-between; 
+        height: 100%; 
+        min-height: 200px;
         background-color: #1e293b;
         transition: transform 0.2s ease;
     }
 
-    /* Optional hover effect */
     .experience-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
-    /* Card title styling */
     .experience-card-title {
         font-size: 1.25rem;
         font-weight: bold;
-        color: #9DEBE3; /* Bootstrap blue */
+        color: #9DEBE3; 
         
     }
 
     .experience-company {
         font-weight: normal;
-        color: #f8fafc; /* Muted gray */
+        color: #f8fafc; 
     }
 
-    /* Subtitle styling */
     .experience-subtitle {
         font-size: 0.9rem;
         margin-bottom: 1rem;
@@ -81,19 +75,19 @@
         
     }
 
-    /* Details list styling */
+    
     .experience-details {
-        padding-left: 20px; /* Add left padding for bullet points */
+        padding-left: 20px; 
     }
 
     .experience-detail-item {
         font-size: 0.95rem;
         line-height: 1.5;
-        color: #f8fafc; /* Dark gray for readability */
+        color: #f8fafc; 
         margin: 10px;
     }
 
-    /* Responsive adjustments */
+    
     @media (max-width: 768px) {
         .experience-title {
             font-size: 1.8rem;
