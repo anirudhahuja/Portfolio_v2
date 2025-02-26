@@ -3,6 +3,7 @@ import Hero from './Hero/Hero';
 import About from './About/About';
 import Tech from './Tech/Tech';
 import Experience from './Experience/Experience';
+import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 
 const Layout = () => {
@@ -23,9 +24,9 @@ const Layout = () => {
                 <Hero />
                 <About />
                 <Tech />
+                <Projects />
                 <Experience />
                 <Contact />
-                
             </div>
         </div>
     );

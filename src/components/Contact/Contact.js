@@ -49,7 +49,7 @@ const ContactForm = () => {
     };
 
     return (
-        <Container className="contact-container py-5">
+        <Container className="contact-container py-5" style={{ paddingBottom: '2rem' }}>
             <h2 className="contact-title text-center mb-4">Get in Touch</h2>
             <hr />
             <div className="contact-description text-center mb-4">

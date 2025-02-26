@@ -4,6 +4,16 @@
 .contact-container {
     border-radius: 10px;
     padding: 2rem;
+    margin-bottom: 0;
+    
+    @media (max-width: 768px) {
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+    }
+}
+
+.contact-title {
+    margin-top: 2rem;
 }
 
 .contact-form-wrapper {
@@ -85,6 +95,9 @@
 .info-wrapper {
     padding-left: 2rem;
     text-align: right;
+    @media (max-width: 768px) {
+        padding-bottom: 0;
+    }
 }
 
 .info-section {
@@ -130,6 +143,11 @@
     transform: scale(1.1);
 }
 
+.contact-content-wrapper {
+    @media (max-width: 768px) {
+        margin-bottom: 0;
+    }
+}
 
 @media (max-width: 768px) {
     .contact-form-wrapper {
