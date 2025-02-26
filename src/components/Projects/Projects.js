@@ -14,14 +14,13 @@ const projects = [
         title: "RoleplayingGainz (RPGz)",
         location: "Los Angeles, CA",
         duration: "November 2024 - Present",
-        details: [
-            "Designed and developed dynamic user interfaces with React Bootstrap, integrating RPG mechanics to create a highly interactive fitness tracking experience.",
-            "Built scalable backend services using Node.js, enabling real-time tracking of fitness activities via APIs.",
-            "Architected and maintained database schemas with Cloudflare's D1 SQL database to securely store user progress and game-related statistics.",
-            "Developed a comprehensive nutrition tracker that integrates external APIs, allowing users to log consumed food items and track nutritional information effectively.",
-            "Utilized Redux to manage the player state, ensuring consistent and seamless updates across the application.",
-            "Enhanced user engagement and retention by gamifying fitness progress through level-ups, quests, and rewards systems.",
-        ],
+        description: 
+            "RoleplayingGainz, RPGz for short, is an innovative fitness web application designed " +
+            "to make your workout routine more engaging and enjoyable. By integrating RPG mechanics, " +
+            "users can track their fitness progress in a fun and interactive way. The app leverages " +
+            "React for dynamic user interfaces and Node.js for scalable backend services, ensuring " +
+            "real-time tracking of activities. With a comprehensive nutrition tracker and gamified " +
+            "progress tracking, I hope to get users to stay motivated and get active, including me :).",
         technologies: [
             { icon: FaReact, name: "React" },
             { icon: FaNode, name: "Node.js" },
@@ -38,13 +37,15 @@ const projects = [
         title: "A Drop of Delight",
         location: "Los Angeles, CA",
         duration: "July 2019 - September 2020",
-        details: [
-            "Spearheaded the development of a comprehensive website using Node.js and React.js for a high-profile fundraiser charity stream in collaboration with the organization Just a Drop.",
-            "Implemented a solution to host images and static assets on a dedicated content delivery network, thereby enhancing the website's speed and responsiveness.",
-            "Deployed the application using CI/CD pipelines, ensuring quick and seamless updates during the live charity event.",
-            "Integrated donation tracking features to monitor progress towards the $10,000 goal, providing real-time updates to participants and donors.",
-            "Collaborated with team members to integrate social media sharing functionalities, increasing campaign visibility and engagement.",
-        ],
+        description: 
+            "A Drop of Delight was a collaborative project undertaken with a group of friends, " +
+            "driven by our shared passion for making a difference. We developed a website to support " +
+            "a charity stream on Twitch, aimed at raising funds to make drinking water more accessible " +
+            "through the charity Just a Drop. Built with Node.js and React.js, the site was designed to engage " +
+            "viewers and streamline donation tracking. By hosting images on a dedicated content delivery " +
+            "network, we ensured fast and responsive user experiences. This project not only highlights " +
+            "the power of technology in driving social impact but also the strength of teamwork in achieving " +
+            "a common goal.",
         technologies: [
             { icon: FaReact, name: "React" },
             { icon: FaNode, name: "Node.js" },
@@ -60,27 +61,12 @@ const projects = [
 
 const ProjectCard = ({ project }) => {
     const [isFlipped, setIsFlipped] = useState(false);
-    const [detailsPage, setDetailsPage] = useState(0);
-
-    // Split details into chunks of 3
-    const detailChunks = [
-        project.details.slice(0, 3),
-        project.details.slice(3)
-    ];
-
-    const handleNextDetails = () => {
-        setDetailsPage((prev) => (prev + 1) % detailChunks.length);
-    };
-
-    const handlePrevDetails = () => {
-        setDetailsPage((prev) => (prev - 1 + detailChunks.length) % detailChunks.length);
-    };
 
     return (
         <div className={`card-container ${isFlipped ? 'is-flipped' : ''}`}>
             <div className="card-front">
-                <Card className="shadow-sm experience-card" style={{ height: '750px' }}>
-                    <div className="project-image-container" style={{ height: '350px' }}>
+                <Card className="shadow-sm project-card">
+                    <div className="project-image-container">
                         <Carousel interval={null} indicators={true} style={{ height: '100%' }}>
                             {project.images.map((image, idx) => (
                                 <Carousel.Item key={idx} style={{ height: '100%' }}>
@@ -94,41 +80,16 @@ const ProjectCard = ({ project }) => {
                             ))}
                         </Carousel>
                     </div>
-                    <Card.Body className="experience-card-body">
-                        <Card.Title className="experience-card-title">
+                    <Card.Body className="project-card-body">
+                        <Card.Title className="project-card-title">
                             {project.title}
                         </Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted experience-subtitle">
+                        <Card.Subtitle className="mb-2 text-muted project-subtitle">
                             {project.location} | {project.duration}
                         </Card.Subtitle>
-                        <div className="details-container">
-                            <ul className="experience-details">
-                                {detailChunks[detailsPage].map((detail, idx) => (
-                                    <li key={idx} className="experience-detail-item">{detail}</li>
-                                ))}
-                            </ul>
-                            <div className="details-navigation">
-                                <Button 
-                                    variant="link" 
-                                    onClick={handlePrevDetails} 
-                                    disabled={detailsPage === 0}
-                                    className="nav-button"
-                                >
-                                    <FaArrowLeft />
-                                </Button>
-                                <span className="page-indicator">
-                                    {detailsPage + 1} / {detailChunks.length}
-                                </span>
-                                <Button 
-                                    variant="link" 
-                                    onClick={handleNextDetails}
-                                    disabled={detailsPage === detailChunks.length - 1}
-                                    className="nav-button"
-                                >
-                                    <FaArrowRight />
-                                </Button>
-                            </div>
-                        </div>
+                        <p className="project-description">
+                            <br/>{project.description}
+                        </p>
                     </Card.Body>
                     <div className="project-links">
                         {project.liveLink && (
@@ -163,7 +124,7 @@ const ProjectCard = ({ project }) => {
                 </Card>
             </div>
             <div className="card-back">
-                <Card className="shadow-sm experience-card" style={{ height: '750px' }}>
+                <Card className="shadow-sm project-card">
                     <Card.Body className="tech-card-body">
                         <h3>Technologies Used</h3> <br/>
                         <div className="tech-grid">
@@ -199,7 +160,7 @@ const Projects = () => {
             <hr />
             <br />
             <br />
-            <Row className="experience-grid">
+            <Row className="project-grid">
                 {projects.map((project, index) => (
                     <Col key={index} md={5} className="mb-4">
                         <ProjectCard project={project} />
