@@ -42,10 +42,8 @@ const projects = [
             "driven by our shared passion for making a difference. We developed a website to support " +
             "a charity stream on Twitch, aimed at raising funds to make drinking water more accessible " +
             "through the charity Just a Drop. Built with Node.js and React.js, the site was designed to engage " +
-            "viewers and streamline donation tracking. By hosting images on a dedicated content delivery " +
-            "network, we ensured fast and responsive user experiences. This project not only highlights " +
-            "the power of technology in driving social impact but also the strength of teamwork in achieving " +
-            "a common goal.",
+            "viewers and streamline donation tracking. This project not only highlights the power of technology " +
+            "in driving social impact but also the strength of teamwork in achieving a common goal.",
         technologies: [
             { icon: FaReact, name: "React" },
             { icon: FaNode, name: "Node.js" },
