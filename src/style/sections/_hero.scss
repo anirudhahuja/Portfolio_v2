@@ -46,8 +46,6 @@
 .resume-button-row {
     position: absolute; 
     top: 67%; 
-    // left: 50%;
-    // transform: translateX(-50%);
     text-align: center;
     margin-right: 2%;
     margin-top: 1px;
@@ -121,6 +119,10 @@
     bottom: 2%;
     left: 50%;
     transform: translateX(-50%);
+    width: auto;
+    display: flex;
+    justify-content: center;
+    padding: 0;
 
     @include respond(breakpoint-md) {
         bottom: 1%;
@@ -132,6 +134,8 @@
     background-color: transparent !important; 
     text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 0;
+    padding: 0;
 
     &:hover {
         transform: translateY(5px);

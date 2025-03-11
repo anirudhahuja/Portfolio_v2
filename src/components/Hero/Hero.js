@@ -41,7 +41,7 @@ const Hero = () => {
                 <Button
                     variant="outline-primary"
                     className="resume-button"
-                    href="https://drive.google.com/file/d/1b9PlWGvPAsU_lAB5SOEK3TnW2YTAY4kn/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1vl-BSzun1mQbb7CXq1Vx6qM1Nm1AKG4R/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
